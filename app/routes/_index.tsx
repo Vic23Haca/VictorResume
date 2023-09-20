@@ -1,5 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import headShot from "../../assets/images/headShot.jpg";
+import FireTruck from "../../assets/images/FireTruck.jpg";
+import airPlane from "../../assets/images/airplane.jpg";
 
 import { useOptionalUser } from "~/utils";
 
@@ -23,13 +26,25 @@ export default function Index() {
             <div className="relative px-4 pb-8 pt-16 sm:px-6 sm:pb-14 sm:pt-24 lg:px-8 lg:pb-20 lg:pt-32">
               <h1 className="text-center text-6xl font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
                 <span className="block uppercase text-blue-500 drop-shadow-md">
-                  Blues Stack
+                  PTI JOB FAIR EDITION
                 </span>
               </h1>
-              <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
-                Check the README.md file for instructions on how to get this
-                project deployed.
-              </p>
+    <div className="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20 mx-auto">
+  <div className="flex justify-center md:justify-end -mt-16">
+    <img className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src={headShot} alt="headshot"/>
+  </div>
+  <div>
+    <h2 className="text-gray-800 text-3xl font-semibold">Welcome!</h2>
+    <p className="mt-2 text-gray-600">
+      Below you will find a special resume tailored for this event. 
+      I've highlighted some key experiences and defining moments in my
+      personal  journey in pursuit for meaningful and fulling work.
+    </p>
+  </div>
+  <div className="flex justify-end mt-4">
+    <a href="#" className="text-xl font-medium text-indigo-500">Victor Dominguez Reyes</a>
+  </div>
+</div>
               <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                 {user ? (
                   <Link
@@ -55,13 +70,6 @@ export default function Index() {
                   </div>
                 )}
               </div>
-              <a href="https://remix.run">
-                <img
-                  src="https://user-images.githubusercontent.com/1500684/158298926-e45dafff-3544-4b69-96d6-d3bcc33fc76a.svg"
-                  alt="Remix"
-                  className="mx-auto mt-16 w-full max-w-[12rem] md:max-w-[16rem]"
-                />
-              </a>
             </div>
           </div>
         </div>
@@ -134,6 +142,61 @@ export default function Index() {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className="relative container mx-auto px-6 flex flex-col space-y-8">
+            <div
+                className="absolute z-0 w-2 h-full bg-white shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0"
+            ></div>
+            <div className="relative z-10">
+                <img
+                    src={FireTruck}
+                    alt=""
+                    className="h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0;"
+                />
+                <div className="pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;">
+                    <div className="timeline-pointer" aria-hidden="true"></div>
+                    <div className="bg-white p-6 rounded-md shadow-md">
+                        <span
+                            className="font-bold text-indigo-600 text-sm tracking-wide"
+                            >Jun 2015</span>
+                        <h1 className="text-2xl font-bold pt-1">
+                            An Amazing Intern
+                        </h1>
+                        <p className="pt-1">
+                        Just prior to completing my high school education, I secured a valuable internship opportunity with the 
+                        Airport Authority, made possible through a Greensboro-based initiative. My original intention, 
+                        prior to graduation, was to embark on a career in aviation. My commitment was so steadfast that 
+                        I even enrolled in an esteemed aviation academy at Andrews High School In High Point.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="relative z-10">
+                <img
+                    src={airPlane}
+                    alt="airPlane"
+                    className="h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0;"
+                />
+                <div className="relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-0 md:mr-auto md:pl-0 md:pr-16;">
+                    <div
+                        className="timeline-pointer timeline-pointer-left"
+                        aria-hidden="true"
+                    ></div>
+                    <div className="bg-white p-6 rounded-md shadow-md text-right">
+                        <span
+                            className="font-bold text-indigo-600 text-sm tracking-wide"
+                            >Jun 2016</span>
+                        <h1 className="text-2xl font-bold pt-1">A Second Internship</h1>
+                        <p className="pt-1">
+                        Following my graduation, I had the privilege of securing another internship, this time with Cessna Citation. During this role, 
+                        I contributed as a valuable member of the parts room team, where I gained valuable experience in managing inventory, 
+                        conducting part checkouts, and delving into the fundamentals of shipping procedures.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </main>
