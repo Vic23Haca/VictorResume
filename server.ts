@@ -120,6 +120,7 @@
   
 // }
 
+require('dotenv').config({ path: '.env' });
 
 import fs from "node:fs";
 import path from "node:path";
